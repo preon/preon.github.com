@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Calibri,Symbol,ZapfDingbats" font-size="10pt" text-align="left" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="1" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Preon Introduction</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Preon Introduction</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="0mm" end-indent="0pt"><fo:block id="d67e1"><fo:block font-family="Calibri,Symbol,ZapfDingbats"><fo:block start-indent="0pt" text-align="center"><fo:block keep-with-next.within-column="always" font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="center" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Preon Introduction</fo:block></fo:block><fo:block space-before="0.5em" font-size="14.4pt"><fo:block>Wilfred Springer</fo:block></fo:block></fo:block></fo:block></fo:block>
+
+  
+
+  <fo:block id="d67e7"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Introduction</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">1. Introduction</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Decoding a compressed data format in Java can be quite a mundane
+      task. This chapter will hopefully convince you that it does not
+      need to be all that complicated. Preon aims to provide a simple
+      and powerful solution.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      This chapter will introduce the most important principles behind
+      Preon. Don't expect this chapter to be an exhaustive reference
+      guide for everything Preon has to offer. Completeness is not
+      considered to be achieved if there is nothing else to add; it is
+      considered to be achieved if there is nothing left to be taken
+      out. The sole objective of this chapter is to prevent surprises
+      once you start to use Preon.
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e11"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Declarative Binding</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2. Declarative Binding</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon is not just a library allowing you to access bits in a
+      bitstream, or a library that has a number of convenience
+      mechansisms allowing you read data from a compressed bitstream
+      encoded format. It is much more than that, and - just like IoC
+      - it obeys the Holywood paradigm: "don't call us, we call
+      you."
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      If Preon would just have been a library of functions
+      facilitating different compression mechanisms, then you would
+      have been required to load the decoded data into your own data
+      structures yourself. But Preon turns that arround: you just
+      provide it the blueprints of the data structure, and Preon
+      will make sure the data gets loaded into the appropriate
+      places.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, the big question is of course: how does Preon know how to
+      load data from a sequence of bits and reconstruct a data
+      structure? What is the recipe? It turns out, the recipe is the
+      data structure itself; it's just classes and attributes,
+      period. And in case the information provided by the data
+      structure is not enough, we will just augment it using
+      annotations.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      So, let's look at an example.
+      <fo:basic-link internal-destination="example-rectangle"><fo:inline>Example 1, “First data structure”</fo:inline></fo:basic-link>
+      defines a data structure
+      defining the coordinates of the two points defining a
+      rectangle, in some coordinate system.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-rectangle"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1. First data structure</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e20">class Rectangle {
+private int x1;
+private int y1;
+private int x2;
+private int y2;
+}
+      </fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Let's just say that the data would be encoded on disk as a
+      sequence of four 32-bit integers. In that case, this is the way
+      you would decode a Rectangle from a file:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e22">
+byte[] in = new byte[] {
+  0, 0, 0, 1,
+  0, 0, 0, 2,
+  0, 0, 0, 3, 
+  0, 0, 0, 4
+};
+Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Rectangle rect = Codecs.decode(codec, in);
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      That's how easy it is. Although... To be perfectly honest, the
+      example is not entirely complete yet. If you would use the code
+      as-is, you would not get anything at all. (Well, an empty
+      Rectangle, maybe.) Problem is, Preon does
+      <fo:inline font-style="italic">not</fo:inline>
+      assume anything unless you explicitly
+      specify at least something. In order to tell Preon that it needs
+      to decode the x1, y1, x2 and y2 fields, you will need to
+      explicitly state it in the definition of the data structure,
+      like this:
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-rectangle-annotated"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 2. First data structure annotated</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e27">class Rectangle {
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}</fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      If you run the same code now, you will get a populated
+      Rectangle.
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e29"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Convention over configuration</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">3. Convention over configuration</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      So, binding a Java data structure to its encoded
+      representation seems to be fairly easy. However, Preon intends
+      to support bitstream encoded data. That is, in many cases you
+      want don't want to allocate the full 32 bits for decoding an
+      integer, and you would just rely on a couple of bits
+      instead. Or what if you don't want big endian byte order, but
+      little endian byte order instead?
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      All of this turns out to be additional configuration only. If
+      you just specify the @Bound annotation, you basically tell
+      Preon to use its default mapping to decode an integer. And by
+      default, it will assume big endian byte order, and decode an
+      integer using 32 bits. If you want to change that, you just
+      need to tell Preon to do so, using other annotations, or
+      (sometimes) other annotation attributes.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-two-bytes"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 3. Encoding integers using two bytes</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e35">class Rectangle {
+  @BoundNumber(size="16") private int x1;
+  @BoundNumber(size="16") private int y1;
+  @BoundNumber(size="16") private int x2;
+  @BoundNumber(size="16") private int y2;
+}</fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      <fo:basic-link internal-destination="example-two-bytes"><fo:inline>Example 3, “Encoding integers using two bytes”</fo:inline></fo:basic-link>
+      changes the example given
+      before to make Preon allocate only two bytes (16 bits) per
+      number.
+      <fo:inline>???</fo:inline>
+      illustrates
+      how to change byte order.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-two-bytes-little-endian"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 4. Encoding integers using little endian byte order</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e41">class Rectangle {
+  @BoundNumber(byteOrder=LittleEndian) private int x1;
+  @BoundNumber(byteOrder=LittleEndian) private int y1;
+  @BoundNumber(byteOrder=LittleEndian) private int x2;
+  @BoundNumber(byteOrder=LittleEndian) private int y2;
+}</fo:block>
+    </fo:block></fo:block>
+  </fo:block>
+  <fo:block id="d67e42"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">More than just numbers</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">4. More than just numbers</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon is not just about decoding numbers. By default, it
+      already supports much more than that. Here are some examples:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e45">
+// Will just read one bit, interpreting 1 as true, and 0 als false
+@Bound boolean visible;
+
+// Reads a String from a fixed number of bytes
+@BoundString(size="10") String value;
+
+// Reads a bit from the in, and interprets it as an enum value,
+// interpreting the number as its ordinal value.
+@BoundNumber(size="1") Type type;</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The first example is a good example of convention over
+      configuration; an @Bound annoation on a boolean attribute will
+      cause Preon to read one bit, and interpret it as true in case
+      it's the value 1, and false otherwise.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The String example illustrates one way of decoding
+      Strings. Note that (in this case) the size attribute denotes
+      <fo:inline font-style="italic">the number of bytes</fo:inline>
+      and not the number of
+      bits. In this case, the bytes read will be interpreted as
+      US-ASCII.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The third example illustrates how an type-safe enum value is
+      bound to the bit in. Again, it relies on an existing
+      annotation that we have already seen before: the @BoundNumber
+      annotation specifies how a certain numeric value needs to be
+      read. That numeric value read needs to correspond to the
+      ordinal value of one of the enum's values.
+    </fo:block>
+  </fo:block>
+  <fo:block id="section-composite-content"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Composite content</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">5. Composite content</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The examples that we have seen so far were all pretty simple:
+      in all cases, it was just about a sequence of attributes. But
+      what if - in your format - you have have some higher-level
+      conceptual organization of some elements? How would you need
+      to deal with that?
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Let's take our Rectangle from
+      <fo:basic-link internal-destination="example-rectangle-annotated"><fo:inline>Example 2, “First data structure annotated”</fo:inline></fo:basic-link>
+      as an example. What if we want
+      it to have a fill and border color as well? Would this be the
+      solution?
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e55">@Bound int fillRed;
+@Bound int fillGreen;
+@Bound int fillBlue;
+@Bound int borderRed;
+@Bound int borderGreen;
+@Bound int borderBlue;</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      ... or would you rather have this?
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e57">@Bound RgbColor fillColor;
+@Bound RgbColor borderColor;</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      I hope you agree with me that the second option would be the
+      preferred one. And it turns out this is possible. If you
+      define your RgbColor class as in<fo:basic-link internal-destination="example-rgb-color"><fo:inline>Example 5, “RGB Color”</fo:inline></fo:basic-link>, then you
+      <fo:inline font-style="italic">can</fo:inline>
+      used the RgbColor type as attributes
+      in other classes.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-rgb-color"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 5. RGB Color</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e63">class RgbColor {
+  @Bound int red;
+  @Bound int green;
+  @Bound int blue;
+}</fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      It's imporant to emphasize that - from a processing
+      expectations point of view - there is no difference between
+      both options. Bot options will result in 6 numeric values
+      being read consecutively. However, the second allows you to
+      stick with the conceptual organization of your file, results
+      in less code and makes it easier to maintain.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Just to complete the example,
+      <fo:basic-link internal-destination="example-rectangle-colored"><fo:inline>Example 6, “Colored Rectangle”</fo:inline></fo:basic-link>
+      gives the source code of
+      the Rectangle supporting colors.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-rectangle-colored"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 6. Colored Rectangle</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e69">class Rectangle {
+  @Bound private RgbColor fillColor;
+  @Bound private RgbColor borderColor;
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}</fo:block>
+    </fo:block></fo:block>
+  </fo:block>
+  <fo:block id="d67e70"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Inheritance</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">6. Inheritance</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In the previous section (<fo:basic-link internal-destination="section-composite-content"><fo:inline>Section 5, “Composite content”</fo:inline></fo:basic-link>), we saw one way of
+      factoring out commonalities. Preon allows you to factor out
+      recurring snippets of content and use those definitions at
+      various places. However, it is
+      <fo:inline font-style="italic">not</fo:inline>
+      the
+      only way to organize content. In this section, I will show you
+      another way.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      <fo:basic-link internal-destination="example-rectangle-colored"><fo:inline>Example 6, “Colored Rectangle”</fo:inline></fo:basic-link>
+      defines just one
+      shape. And of course, that shape also defines some color
+      attributes. But what if your application defines more
+      shapes. And what if you want all of those shapes to define the
+      same color attributes?
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In order to facilitate scenarios like these, Preon supports
+      inheritance. That is, subclasses will
+      <fo:inline font-style="italic">allways</fo:inline>
+      inherit the bindings defined by
+      the superclass. This allows you to define color bindings on a
+      Shape superclass, and have all of the other shape-specific
+      attributes on the various Shape subclsses.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-shape-inheritance"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 7. Shape Inheritance</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e81">
+class Shape {
+  @Bound fillColor;
+  @Bound lineColor;
+}
+
+class Rectangle extends Shape {
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}
+
+class Circle extends Shape {
+  @Bound int centerX;
+  @Bound int centerY;
+  @Bound int radius;
+}</fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      When Preon is required to decode a subclass, it will always
+      first process the inherited bindings. In case of a Rectangle,
+      it will first decode the colors it inherited from Shape, and
+      only then the attributes of the rectangle itself.
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e83"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Lists</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">7. Lists</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The 'struct'-type of support highlighted in the previous
+      sections is an important concept, but not sufficient. We also
+      need a 'sequence' concept.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In Preon, the @BoundList annotation allows you to address all
+      of these 'sequencing' concerns. And the annotation driven
+      approach makes it fairly easy to use.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Let's just say you want to store a pseudo-Mondriaan type of
+      painting, existing of colored rectangles only. In that case,
+      you could use code like this:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e88">
+class PseudoMondriaan {
+  @BoundList(type=Rectangle.class, size="20") 
+  Rectangle[] rectangles;
+}</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The code given above simply states that - whenever you want to
+      decode a PseudoMondriaan, read 20 Rectangle instances
+      according to its specifications, and store them as them as the
+      attribute 'rectangles'.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, it is of course questionable if it is realistic to expect
+      that every PseudoMondriaan contains exactly 20
+      rectangles. However, the @BoundList's size attribute also
+      takes expressions that are evaluated at runtime. More on that in
+      <fo:basic-link internal-destination="section-expressions"><fo:inline>Section 9, “Expressions”</fo:inline></fo:basic-link>.
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e92"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Lazy loading lists</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">8. Lazy loading lists</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Arrays are not the only type of lists supported by default;
+      Preon also supports Lists (the java.util.List) kind, as you
+      might have expected. There is however a difference with the way
+      it treats Lists.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Whenever Preon decodes a List of items from the bit in,
+      there is a chance it will inject a lazy-loading List into the
+      List type attribute instead of fully-populated eagerly loaded
+      List instance. I say there is 'a chance', since it really
+      depends on a number of conditions if it will do so. The actual
+      conditions are quite complex, but they can be summarized as "the
+      principle of the least surprise."
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e96">
+class PseudoMondriaan {
+  @BoundList(size="20", type=Rectangle.class)
+  private List&lt;Rectangle&gt; rectangles;
+}
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon has a preference for loading data lazily. In the above
+      case, the size of each Rectangle instance is known in
+      advance. In fact, we know that the number of bits occupied by
+      the entire List will be 20 times the size of single
+      Rectangle. And we also know that - in order to get the third
+      element - we just need to skip over the first two elements (the
+      number of bits of a single Rectangle element, multiplied by
+      two).
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Using a lazy loading List is in the above case probably a fairly
+      efficient thing to do. There are other cases in which this would
+      be much harder, typically when the List item's size is
+      determined at runtime. In cases like these, Preon will
+      automatically pick an alternative Codec, most likely one that
+      eagerly loads the data.
+    </fo:block>
+  </fo:block>
+  <fo:block id="section-expressions"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Expressions</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">9. Expressions</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      By now, you probably wondered a couple of times why the size
+      attribute on @BoundList and @BoundString accepts String values
+      instead of numbers. It seems rather a wasteful, and the compiler
+      is not going to help you to make sure you enter numeric values
+      in these situations.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The truth is, these attributes expect more than just numeric
+      values: a lot of annotations in Preon allow you to pass in
+      expressions, instead of numeric values. The size attribute on
+      @BoundList and @BoundString are just examples of cases in which
+      these expresions are accepted.
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e103">class PseudoMondriaan {
+  @Bound int numberOfRectangles;
+  @BoundList(size="numberOfRectangles", type=Rectangle.class)
+    List&lt;Rectangle&gt; rectangles;
+}</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The example above is still a fairly simple example. It refers to
+      a variable called numberOfRectangles, and it's now hard to guess
+      how this variable is getting resolved: by default, Preon will
+      try to resolve variables into bound attributes defined
+      before. (There are other types of references, but let's stick
+      with this simple example for now.)
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, you can obviously construct more complex expressions than
+      this. And in order to do that, you can use a range of arithmetic
+      or logical operators. Here are some examples:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e106">
+@BoundList(size="width * height") byte[] pixels;
+@BoundNumber(size="nrBits * 2") int value;
+// Clearly pointless, but you know...
+@BoundString(size="x * (y + z) / 23 ^ t");
+    </fo:block>
+  </fo:block>
+  <fo:block id="section-limbo"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Limbo</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">10. Limbo</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The expression language used in the examples of the previous
+      language is Limbo. Limbo is a fairly small expression language,
+      and is explicitly aiming at
+      <fo:inline font-style="italic">not</fo:inline>
+      being as
+      feature rich as JSP's EL or OGNL, and for good reason.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      First of all, JSP's EL and OGNL allow you to call methods on
+      objects. Limbo does
+      <fo:inline font-style="italic">not</fo:inline>
+      allow you to call
+      methods, because<fo:inline font-style="italic">it wants to capture the meaning of
+      the expression explicitly</fo:inline>. And it would be impossible
+      to capture the meaning of your expression if it would involve
+      operations defined outside of Limbo itself. So, Limbo works on
+      data only, and the number of operators is finite.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Limbo is not just about evaluating expressions. It also wants to
+      capture those expressions in such a way that it will be able to
+      generate
+      <fo:inline font-style="italic">human-readable</fo:inline>
+      expressions from it
+      afterwards. So, if these would be the Limbo expressions:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e116">width * height
+a^2 + b^2 == c^2</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      ... then Limbo wants to be capable of turning this into this:
+    </fo:block>
+    <fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d67e118"><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d67e119"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+        <fo:block>
+          width of the image times the height of the image
+        </fo:block>
+      </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d67e121"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+        <fo:block>
+          the sum of a to the power of 2 and b to the power of two
+          equals c to the power of two
+        </fo:block>
+      </fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In a couple of sections, we will see why this is relevant.
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e124"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Conditionals</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">11. Conditionals</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The size attribute defined on the @BoundList annotation
+      obviously acts as a type of control mechanism. However, in order
+      to be able to deal with the majority of encoding formats, we
+      need to introduce a couple of other control structures, in order
+      to support with conditionals.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, the number of places in which you would be able to use a
+      condition is again open-ended. Preon is extensible, so you can
+      define your own annotations using conditions wherever you
+      like. However, the framework supports some by default, and we
+      are going to mention two here.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The first one is the @If annotations. By putting this annotation
+      in front of an attribute, you basically state that - whatever
+      attribute is following - it should only be decoded if the
+      condition inside the @If holds.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, let's see what that means in our example. Let's just say
+      that a Shape allows you to specify that you want a dashed
+      border, and that it defines some additional attributes allowing
+      you to control how the dashes are drawn.
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e130">
+class Shape {
+  @Bound Color fillColor;
+  @Bound Color borderColor;
+  @Bound boolean dashed;
+  @If("dashed")
+  @Bound int spaceBetweenDashes;
+}
+    </fo:block>
+  </fo:block>
+  <fo:block id="d67e131"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Complex references</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">12. Complex references</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      <fo:basic-link internal-destination="section-expressions"><fo:inline>Section 9, “Expressions”</fo:inline></fo:basic-link>
+      already mentioned that
+      Preon does not limit you to refer to other bound attributes on
+      the same class only. It also supports the dot operator (to
+      access attributes of objects referenced) and the item operator (
+      to access items in list-type attributes).
+      <fo:basic-link internal-destination="example-valid-references"><fo:inline>Example 8, “Valid references”</fo:inline></fo:basic-link>
+      lists some sample references.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-valid-references"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 8. Valid references</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e138">
+a.b.c
+a.b[0].d
+a.b[e].d
+a.b[e * 21].d
+    </fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Another thing that Preon allows you to do is to refer to the
+      <fo:inline font-style="italic">outer</fo:inline>
+      context.
+      <fo:basic-link internal-destination="example-outer-context"><fo:inline>Example 9, “Outer context references”</fo:inline></fo:basic-link>
+      relies on this to refer to the
+      <fo:inline font-family="Consola">bitsPerColorComponent</fo:inline>
+      variable in the Image, from
+      within the RgbColor object.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-outer-context"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 9. Outer context references</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e145">
+public class Image {
+  @Bound int bitsPerColorComponent;
+  @Bound int nrColors;
+  @BoundList(size="nrColors") RgbColor[] colors;
+  ...
+  public class RgbColor {
+    @BoundNumber(size="outer.bitsPerColorComponent") red;
+    @BoundNumber(size="outer.bitsPerColorComponent") green;
+    @BoundNumber(size="outer.bitsPerColorComponent") blue;
+  }
+}
+      </fo:block>
+    </fo:block></fo:block>
+  </fo:block>
+  <fo:block id="d67e146"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Documentation</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">13. Documentation</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Various sections in this chapter already alluded to the fact
+      that Preon aims at capturing dependencies between different
+      pieces of data explicitly, in order to be able to generate
+      documentation. If this is the first time you read about Preon,
+      you might wonder what that was all about.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon was born out of unease with an existing situation. In that
+      existing situation, one guy was responsible for the software for
+      decoding a complicated file format, while another was
+      responsible for encoding data; both of them were responsible to
+      keep documentation in sync. In the end, everything turned to be
+      out of sync. Keeping the encoder in sync with the decoder was
+      hard, and the documentation was always out of whack.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon aims to change all of that: it set of to provide a
+      framework in which you specify the encoding format once, and get
+      decoders, encoders
+      <fo:inline font-style="italic">and documentation</fo:inline>
+      for
+      free.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      So, how does it work? Well, if you remember the first example in
+      this chapter, we constructed a Codec and used a Codec using the
+      Codecs class, like this:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e153">Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Rectangle rect = Codecs.decode(codec, in);</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Generating documentation just requires using another operation
+      on Codecs:
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d67e155">Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Codecs.document(codec, DocumentType.Html, new File(...);</fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      When you apply that to<fo:basic-link internal-destination="example-shape-inheritance"><fo:inline>Example 7, “Shape Inheritance”</fo:inline></fo:basic-link>, this is what you get:
+    </fo:block>
+    <fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="d67e158"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Figure 1. Sample report</fo:block>
+      
+      <fo:block id="d67e160"><fo:external-graphic src="url(src/docbkx/report.png)" width="9cm" height="auto" content-width="scale-to-fit" content-height="scale-to-fit"/></fo:block>
+    </fo:block>
+  </fo:block>
+</fo:flow></fo:page-sequence></fo:root>

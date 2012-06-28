@@ -1,0 +1,624 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Preon Introduction</title><link rel="stylesheet" type="text/css" href="css/docbkx-style.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" title="Preon Introduction" id="d200e1"><div class="titlepage"><div><div><h2 class="title">Preon Introduction</h2></div><div><div class="author"><h3 class="author"><span class="firstname">Wilfred</span> <span class="surname">Springer</span></h3></div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d200e7">1. Introduction</a></span></dt><dt><span class="section"><a href="#d200e11">2. Declarative Binding</a></span></dt><dt><span class="section"><a href="#d200e29">3. Convention over configuration</a></span></dt><dt><span class="section"><a href="#d200e42">4. More than just numbers</a></span></dt><dt><span class="section"><a href="#section-composite-content">5. Composite content</a></span></dt><dt><span class="section"><a href="#d200e70">6. Inheritance</a></span></dt><dt><span class="section"><a href="#d200e83">7. Lists</a></span></dt><dt><span class="section"><a href="#d200e92">8. Lazy loading lists</a></span></dt><dt><span class="section"><a href="#section-expressions">9. Expressions</a></span></dt><dt><span class="section"><a href="#section-limbo">10. Limbo</a></span></dt><dt><span class="section"><a href="#d200e124">11. Conditionals</a></span></dt><dt><span class="section"><a href="#d200e131">12. Complex references</a></span></dt><dt><span class="section"><a href="#d200e146">13. Documentation</a></span></dt></dl></div>
+
+  
+
+  <div class="section" title="1.&nbsp;Introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e7">1.&nbsp;Introduction</h2></div></div></div>
+    
+    <p>
+      Decoding a compressed data format in Java can be quite a mundane
+      task. This chapter will hopefully convince you that it does not
+      need to be all that complicated. Preon aims to provide a simple
+      and powerful solution.
+    </p>
+    <p>
+      This chapter will introduce the most important principles behind
+      Preon. Don't expect this chapter to be an exhaustive reference
+      guide for everything Preon has to offer. Completeness is not
+      considered to be achieved if there is nothing else to add; it is
+      considered to be achieved if there is nothing left to be taken
+      out. The sole objective of this chapter is to prevent surprises
+      once you start to use Preon.
+    </p>
+  </div>
+  <div class="section" title="2.&nbsp;Declarative Binding"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e11">2.&nbsp;Declarative Binding</h2></div></div></div>
+    
+    <p>
+      Preon is not just a library allowing you to access bits in a
+      bitstream, or a library that has a number of convenience
+      mechansisms allowing you read data from a compressed bitstream
+      encoded format. It is much more than that, and - just like IoC
+      - it obeys the Holywood paradigm: "don't call us, we call
+      you."
+    </p>
+    <p>
+      If Preon would just have been a library of functions
+      facilitating different compression mechanisms, then you would
+      have been required to load the decoded data into your own data
+      structures yourself. But Preon turns that arround: you just
+      provide it the blueprints of the data structure, and Preon
+      will make sure the data gets loaded into the appropriate
+      places.
+    </p>
+    <p>
+      Now, the big question is of course: how does Preon know how to
+      load data from a sequence of bits and reconstruct a data
+      structure? What is the recipe? It turns out, the recipe is the
+      data structure itself; it's just classes and attributes,
+      period. And in case the information provided by the data
+      structure is not enough, we will just augment it using
+      annotations.
+    </p>
+    <p>
+      So, let's look at an example.
+      <a class="xref" href="#example-rectangle" title="Example&nbsp;1.&nbsp;First data structure">Example&nbsp;1, &#8220;First data structure&#8221;</a>
+      defines a data structure
+      defining the coordinates of the two points defining a
+      rectangle, in some coordinate system.
+    </p>
+    <div class="example"><a name="example-rectangle"></a><p class="title"><b>Example&nbsp;1.&nbsp;First data structure</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class Rectangle {
+private int x1;
+private int y1;
+private int x2;
+private int y2;
+}
+      </pre>
+    </div></div><br class="example-break">
+    <p>
+      Let's just say that the data would be encoded on disk as a
+      sequence of four 32-bit integers. In that case, this is the way
+      you would decode a Rectangle from a file:
+    </p>
+    <pre class="programlisting">
+byte[] in = new byte[] {
+  0, 0, 0, 1,
+  0, 0, 0, 2,
+  0, 0, 0, 3, 
+  0, 0, 0, 4
+};
+Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Rectangle rect = Codecs.decode(codec, in);
+    </pre>
+    <p>
+      That's how easy it is. Although... To be perfectly honest, the
+      example is not entirely complete yet. If you would use the code
+      as-is, you would not get anything at all. (Well, an empty
+      Rectangle, maybe.) Problem is, Preon does
+      <span class="emphasis"><em>not</em></span>
+      assume anything unless you explicitly
+      specify at least something. In order to tell Preon that it needs
+      to decode the x1, y1, x2 and y2 fields, you will need to
+      explicitly state it in the definition of the data structure,
+      like this:
+    </p>
+    <div class="example"><a name="example-rectangle-annotated"></a><p class="title"><b>Example&nbsp;2.&nbsp;First data structure annotated</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class Rectangle {
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}</pre>
+    </div></div><br class="example-break">
+    <p>
+      If you run the same code now, you will get a populated
+      Rectangle.
+    </p>
+  </div>
+  <div class="section" title="3.&nbsp;Convention over configuration"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e29">3.&nbsp;Convention over configuration</h2></div></div></div>
+    
+    <p>
+      So, binding a Java data structure to its encoded
+      representation seems to be fairly easy. However, Preon intends
+      to support bitstream encoded data. That is, in many cases you
+      want don't want to allocate the full 32 bits for decoding an
+      integer, and you would just rely on a couple of bits
+      instead. Or what if you don't want big endian byte order, but
+      little endian byte order instead?
+    </p>
+    <p>
+      All of this turns out to be additional configuration only. If
+      you just specify the @Bound annotation, you basically tell
+      Preon to use its default mapping to decode an integer. And by
+      default, it will assume big endian byte order, and decode an
+      integer using 32 bits. If you want to change that, you just
+      need to tell Preon to do so, using other annotations, or
+      (sometimes) other annotation attributes.
+    </p>
+    <div class="example"><a name="example-two-bytes"></a><p class="title"><b>Example&nbsp;3.&nbsp;Encoding integers using two bytes</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class Rectangle {
+  @BoundNumber(size="16") private int x1;
+  @BoundNumber(size="16") private int y1;
+  @BoundNumber(size="16") private int x2;
+  @BoundNumber(size="16") private int y2;
+}</pre>
+    </div></div><br class="example-break">
+    <p>
+      <a class="xref" href="#example-two-bytes" title="Example&nbsp;3.&nbsp;Encoding integers using two bytes">Example&nbsp;3, &#8220;Encoding integers using two bytes&#8221;</a>
+      changes the example given
+      before to make Preon allocate only two bytes (16 bits) per
+      number.
+      <a class="xref" href="#">???</a>
+      illustrates
+      how to change byte order.
+    </p>
+    <div class="example"><a name="example-two-bytes-little-endian"></a><p class="title"><b>Example&nbsp;4.&nbsp;Encoding integers using little endian byte order</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class Rectangle {
+  @BoundNumber(byteOrder=LittleEndian) private int x1;
+  @BoundNumber(byteOrder=LittleEndian) private int y1;
+  @BoundNumber(byteOrder=LittleEndian) private int x2;
+  @BoundNumber(byteOrder=LittleEndian) private int y2;
+}</pre>
+    </div></div><br class="example-break">
+  </div>
+  <div class="section" title="4.&nbsp;More than just numbers"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e42">4.&nbsp;More than just numbers</h2></div></div></div>
+    
+    <p>
+      Preon is not just about decoding numbers. By default, it
+      already supports much more than that. Here are some examples:
+    </p>
+    <pre class="programlisting">
+// Will just read one bit, interpreting 1 as true, and 0 als false
+@Bound boolean visible;
+
+// Reads a String from a fixed number of bytes
+@BoundString(size="10") String value;
+
+// Reads a bit from the in, and interprets it as an enum value,
+// interpreting the number as its ordinal value.
+@BoundNumber(size="1") Type type;</pre>
+    <p>
+      The first example is a good example of convention over
+      configuration; an @Bound annoation on a boolean attribute will
+      cause Preon to read one bit, and interpret it as true in case
+      it's the value 1, and false otherwise.
+    </p>
+    <p>
+      The String example illustrates one way of decoding
+      Strings. Note that (in this case) the size attribute denotes
+      <span class="emphasis"><em>the number of bytes</em></span>
+      and not the number of
+      bits. In this case, the bytes read will be interpreted as
+      US-ASCII.
+    </p>
+    <p>
+      The third example illustrates how an type-safe enum value is
+      bound to the bit in. Again, it relies on an existing
+      annotation that we have already seen before: the @BoundNumber
+      annotation specifies how a certain numeric value needs to be
+      read. That numeric value read needs to correspond to the
+      ordinal value of one of the enum's values.
+    </p>
+  </div>
+  <div class="section" title="5.&nbsp;Composite content"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="section-composite-content">5.&nbsp;Composite content</h2></div></div></div>
+    
+    <p>
+      The examples that we have seen so far were all pretty simple:
+      in all cases, it was just about a sequence of attributes. But
+      what if - in your format - you have have some higher-level
+      conceptual organization of some elements? How would you need
+      to deal with that?
+    </p>
+    <p>
+      Let's take our Rectangle from
+      <a class="xref" href="#example-rectangle-annotated" title="Example&nbsp;2.&nbsp;First data structure annotated">Example&nbsp;2, &#8220;First data structure annotated&#8221;</a>
+      as an example. What if we want
+      it to have a fill and border color as well? Would this be the
+      solution?
+    </p>
+    <pre class="programlisting">@Bound int fillRed;
+@Bound int fillGreen;
+@Bound int fillBlue;
+@Bound int borderRed;
+@Bound int borderGreen;
+@Bound int borderBlue;</pre>
+    <p>
+      ... or would you rather have this?
+    </p>
+    <pre class="programlisting">@Bound RgbColor fillColor;
+@Bound RgbColor borderColor;</pre>
+    <p>
+      I hope you agree with me that the second option would be the
+      preferred one. And it turns out this is possible. If you
+      define your RgbColor class as in<a class="xref" href="#example-rgb-color" title="Example&nbsp;5.&nbsp;RGB Color">Example&nbsp;5, &#8220;RGB Color&#8221;</a>, then you
+      <span class="emphasis"><em>can</em></span>
+      used the RgbColor type as attributes
+      in other classes.
+    </p>
+    <div class="example"><a name="example-rgb-color"></a><p class="title"><b>Example&nbsp;5.&nbsp;RGB Color</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class RgbColor {
+  @Bound int red;
+  @Bound int green;
+  @Bound int blue;
+}</pre>
+    </div></div><br class="example-break">
+    <p>
+      It's imporant to emphasize that - from a processing
+      expectations point of view - there is no difference between
+      both options. Bot options will result in 6 numeric values
+      being read consecutively. However, the second allows you to
+      stick with the conceptual organization of your file, results
+      in less code and makes it easier to maintain.
+    </p>
+    <p>
+      Just to complete the example,
+      <a class="xref" href="#example-rectangle-colored" title="Example&nbsp;6.&nbsp;Colored Rectangle">Example&nbsp;6, &#8220;Colored Rectangle&#8221;</a>
+      gives the source code of
+      the Rectangle supporting colors.
+    </p>
+    <div class="example"><a name="example-rectangle-colored"></a><p class="title"><b>Example&nbsp;6.&nbsp;Colored Rectangle</b></p><div class="example-contents">
+      
+      <pre class="programlisting">class Rectangle {
+  @Bound private RgbColor fillColor;
+  @Bound private RgbColor borderColor;
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}</pre>
+    </div></div><br class="example-break">
+  </div>
+  <div class="section" title="6.&nbsp;Inheritance"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e70">6.&nbsp;Inheritance</h2></div></div></div>
+    
+    <p>
+      In the previous section (<a class="xref" href="#section-composite-content" title="5.&nbsp;Composite content">Section&nbsp;5, &#8220;Composite content&#8221;</a>), we saw one way of
+      factoring out commonalities. Preon allows you to factor out
+      recurring snippets of content and use those definitions at
+      various places. However, it is
+      <span class="emphasis"><em>not</em></span>
+      the
+      only way to organize content. In this section, I will show you
+      another way.
+    </p>
+    <p>
+      <a class="xref" href="#example-rectangle-colored" title="Example&nbsp;6.&nbsp;Colored Rectangle">Example&nbsp;6, &#8220;Colored Rectangle&#8221;</a>
+      defines just one
+      shape. And of course, that shape also defines some color
+      attributes. But what if your application defines more
+      shapes. And what if you want all of those shapes to define the
+      same color attributes?
+    </p>
+    <p>
+      In order to facilitate scenarios like these, Preon supports
+      inheritance. That is, subclasses will
+      <span class="emphasis"><em>allways</em></span>
+      inherit the bindings defined by
+      the superclass. This allows you to define color bindings on a
+      Shape superclass, and have all of the other shape-specific
+      attributes on the various Shape subclsses.
+    </p>
+    <div class="example"><a name="example-shape-inheritance"></a><p class="title"><b>Example&nbsp;7.&nbsp;Shape Inheritance</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+class Shape {
+  @Bound fillColor;
+  @Bound lineColor;
+}
+
+class Rectangle extends Shape {
+  @Bound private int x1;
+  @Bound private int y1;
+  @Bound private int x2;
+  @Bound private int y2;
+}
+
+class Circle extends Shape {
+  @Bound int centerX;
+  @Bound int centerY;
+  @Bound int radius;
+}</pre>
+    </div></div><br class="example-break">
+    <p>
+      When Preon is required to decode a subclass, it will always
+      first process the inherited bindings. In case of a Rectangle,
+      it will first decode the colors it inherited from Shape, and
+      only then the attributes of the rectangle itself.
+    </p>
+  </div>
+  <div class="section" title="7.&nbsp;Lists"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e83">7.&nbsp;Lists</h2></div></div></div>
+    
+    <p>
+      The 'struct'-type of support highlighted in the previous
+      sections is an important concept, but not sufficient. We also
+      need a 'sequence' concept.
+    </p>
+    <p>
+      In Preon, the @BoundList annotation allows you to address all
+      of these 'sequencing' concerns. And the annotation driven
+      approach makes it fairly easy to use.
+    </p>
+    <p>
+      Let's just say you want to store a pseudo-Mondriaan type of
+      painting, existing of colored rectangles only. In that case,
+      you could use code like this:
+    </p>
+    <pre class="programlisting">
+class PseudoMondriaan {
+  @BoundList(type=Rectangle.class, size="20") 
+  Rectangle[] rectangles;
+}</pre>
+    <p>
+      The code given above simply states that - whenever you want to
+      decode a PseudoMondriaan, read 20 Rectangle instances
+      according to its specifications, and store them as them as the
+      attribute 'rectangles'.
+    </p>
+    <p>
+      Now, it is of course questionable if it is realistic to expect
+      that every PseudoMondriaan contains exactly 20
+      rectangles. However, the @BoundList's size attribute also
+      takes expressions that are evaluated at runtime. More on that in
+      <a class="xref" href="#section-expressions" title="9.&nbsp;Expressions">Section&nbsp;9, &#8220;Expressions&#8221;</a>.
+    </p>
+  </div>
+  <div class="section" title="8.&nbsp;Lazy loading lists"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e92">8.&nbsp;Lazy loading lists</h2></div></div></div>
+    
+    <p>
+      Arrays are not the only type of lists supported by default;
+      Preon also supports Lists (the java.util.List) kind, as you
+      might have expected. There is however a difference with the way
+      it treats Lists.
+    </p>
+    <p>
+      Whenever Preon decodes a List of items from the bit in,
+      there is a chance it will inject a lazy-loading List into the
+      List type attribute instead of fully-populated eagerly loaded
+      List instance. I say there is 'a chance', since it really
+      depends on a number of conditions if it will do so. The actual
+      conditions are quite complex, but they can be summarized as "the
+      principle of the least surprise."
+    </p>
+    <pre class="programlisting">
+class PseudoMondriaan {
+  @BoundList(size="20", type=Rectangle.class)
+  private List&lt;Rectangle&gt; rectangles;
+}
+    </pre>
+    <p>
+      Preon has a preference for loading data lazily. In the above
+      case, the size of each Rectangle instance is known in
+      advance. In fact, we know that the number of bits occupied by
+      the entire List will be 20 times the size of single
+      Rectangle. And we also know that - in order to get the third
+      element - we just need to skip over the first two elements (the
+      number of bits of a single Rectangle element, multiplied by
+      two).
+    </p>
+    <p>
+      Using a lazy loading List is in the above case probably a fairly
+      efficient thing to do. There are other cases in which this would
+      be much harder, typically when the List item's size is
+      determined at runtime. In cases like these, Preon will
+      automatically pick an alternative Codec, most likely one that
+      eagerly loads the data.
+    </p>
+  </div>
+  <div class="section" title="9.&nbsp;Expressions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="section-expressions">9.&nbsp;Expressions</h2></div></div></div>
+    
+    <p>
+      By now, you probably wondered a couple of times why the size
+      attribute on @BoundList and @BoundString accepts String values
+      instead of numbers. It seems rather a wasteful, and the compiler
+      is not going to help you to make sure you enter numeric values
+      in these situations.
+    </p>
+    <p>
+      The truth is, these attributes expect more than just numeric
+      values: a lot of annotations in Preon allow you to pass in
+      expressions, instead of numeric values. The size attribute on
+      @BoundList and @BoundString are just examples of cases in which
+      these expresions are accepted.
+    </p>
+    <pre class="programlisting">class PseudoMondriaan {
+  @Bound int numberOfRectangles;
+  @BoundList(size="numberOfRectangles", type=Rectangle.class)
+    List&lt;Rectangle&gt; rectangles;
+}</pre>
+    <p>
+      The example above is still a fairly simple example. It refers to
+      a variable called numberOfRectangles, and it's now hard to guess
+      how this variable is getting resolved: by default, Preon will
+      try to resolve variables into bound attributes defined
+      before. (There are other types of references, but let's stick
+      with this simple example for now.)
+    </p>
+    <p>
+      Now, you can obviously construct more complex expressions than
+      this. And in order to do that, you can use a range of arithmetic
+      or logical operators. Here are some examples:
+    </p>
+    <pre class="programlisting">
+@BoundList(size="width * height") byte[] pixels;
+@BoundNumber(size="nrBits * 2") int value;
+// Clearly pointless, but you know...
+@BoundString(size="x * (y + z) / 23 ^ t");
+    </pre>
+  </div>
+  <div class="section" title="10.&nbsp;Limbo"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="section-limbo">10.&nbsp;Limbo</h2></div></div></div>
+    
+    <p>
+      The expression language used in the examples of the previous
+      language is Limbo. Limbo is a fairly small expression language,
+      and is explicitly aiming at
+      <span class="emphasis"><em>not</em></span>
+      being as
+      feature rich as JSP's EL or OGNL, and for good reason.
+    </p>
+    <p>
+      First of all, JSP's EL and OGNL allow you to call methods on
+      objects. Limbo does
+      <span class="emphasis"><em>not</em></span>
+      allow you to call
+      methods, because<span class="emphasis"><em>it wants to capture the meaning of
+      the expression explicitly</em></span>. And it would be impossible
+      to capture the meaning of your expression if it would involve
+      operations defined outside of Limbo itself. So, Limbo works on
+      data only, and the number of operators is finite.
+    </p>
+    <p>
+      Limbo is not just about evaluating expressions. It also wants to
+      capture those expressions in such a way that it will be able to
+      generate
+      <span class="emphasis"><em>human-readable</em></span>
+      expressions from it
+      afterwards. So, if these would be the Limbo expressions:
+    </p>
+    <pre class="screen">width * height
+a^2 + b^2 == c^2</pre>
+    <p>
+      ... then Limbo wants to be capable of turning this into this:
+    </p>
+    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem">
+        <p>
+          width of the image times the height of the image
+        </p>
+      </li><li class="listitem">
+        <p>
+          the sum of a to the power of 2 and b to the power of two
+          equals c to the power of two
+        </p>
+      </li></ul></div>
+    <p>
+      In a couple of sections, we will see why this is relevant.
+    </p>
+  </div>
+  <div class="section" title="11.&nbsp;Conditionals"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e124">11.&nbsp;Conditionals</h2></div></div></div>
+    
+    <p>
+      The size attribute defined on the @BoundList annotation
+      obviously acts as a type of control mechanism. However, in order
+      to be able to deal with the majority of encoding formats, we
+      need to introduce a couple of other control structures, in order
+      to support with conditionals.
+    </p>
+    <p>
+      Now, the number of places in which you would be able to use a
+      condition is again open-ended. Preon is extensible, so you can
+      define your own annotations using conditions wherever you
+      like. However, the framework supports some by default, and we
+      are going to mention two here.
+    </p>
+    <p>
+      The first one is the @If annotations. By putting this annotation
+      in front of an attribute, you basically state that - whatever
+      attribute is following - it should only be decoded if the
+      condition inside the @If holds.
+    </p>
+    <p>
+      Now, let's see what that means in our example. Let's just say
+      that a Shape allows you to specify that you want a dashed
+      border, and that it defines some additional attributes allowing
+      you to control how the dashes are drawn.
+    </p>
+    <pre class="programlisting">
+class Shape {
+  @Bound Color fillColor;
+  @Bound Color borderColor;
+  @Bound boolean dashed;
+  @If("dashed")
+  @Bound int spaceBetweenDashes;
+}
+    </pre>
+  </div>
+  <div class="section" title="12.&nbsp;Complex references"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e131">12.&nbsp;Complex references</h2></div></div></div>
+    
+    <p>
+      <a class="xref" href="#section-expressions" title="9.&nbsp;Expressions">Section&nbsp;9, &#8220;Expressions&#8221;</a>
+      already mentioned that
+      Preon does not limit you to refer to other bound attributes on
+      the same class only. It also supports the dot operator (to
+      access attributes of objects referenced) and the item operator (
+      to access items in list-type attributes).
+      <a class="xref" href="#example-valid-references" title="Example&nbsp;8.&nbsp;Valid references">Example&nbsp;8, &#8220;Valid references&#8221;</a>
+      lists some sample references.
+    </p>
+    <div class="example"><a name="example-valid-references"></a><p class="title"><b>Example&nbsp;8.&nbsp;Valid references</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+a.b.c
+a.b[0].d
+a.b[e].d
+a.b[e * 21].d
+    </pre>
+    </div></div><br class="example-break">
+    <p>
+      Another thing that Preon allows you to do is to refer to the
+      <em class="firstterm">outer</em>
+      context.
+      <a class="xref" href="#example-outer-context" title="Example&nbsp;9.&nbsp;Outer context references">Example&nbsp;9, &#8220;Outer context references&#8221;</a>
+      relies on this to refer to the
+      <code class="envar">bitsPerColorComponent</code>
+      variable in the Image, from
+      within the RgbColor object.
+    </p>
+    <div class="example"><a name="example-outer-context"></a><p class="title"><b>Example&nbsp;9.&nbsp;Outer context references</b></p><div class="example-contents">
+      
+      <pre class="programlisting">
+public class Image {
+  @Bound int bitsPerColorComponent;
+  @Bound int nrColors;
+  @BoundList(size="nrColors") RgbColor[] colors;
+  ...
+  public class RgbColor {
+    @BoundNumber(size="outer.bitsPerColorComponent") red;
+    @BoundNumber(size="outer.bitsPerColorComponent") green;
+    @BoundNumber(size="outer.bitsPerColorComponent") blue;
+  }
+}
+      </pre>
+    </div></div><br class="example-break">
+  </div>
+  <div class="section" title="13.&nbsp;Documentation"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d200e146">13.&nbsp;Documentation</h2></div></div></div>
+    
+    <p>
+      Various sections in this chapter already alluded to the fact
+      that Preon aims at capturing dependencies between different
+      pieces of data explicitly, in order to be able to generate
+      documentation. If this is the first time you read about Preon,
+      you might wonder what that was all about.
+    </p>
+    <p>
+      Preon was born out of unease with an existing situation. In that
+      existing situation, one guy was responsible for the software for
+      decoding a complicated file format, while another was
+      responsible for encoding data; both of them were responsible to
+      keep documentation in sync. In the end, everything turned to be
+      out of sync. Keeping the encoder in sync with the decoder was
+      hard, and the documentation was always out of whack.
+    </p>
+    <p>
+      Preon aims to change all of that: it set of to provide a
+      framework in which you specify the encoding format once, and get
+      decoders, encoders
+      <span class="emphasis"><em>and documentation</em></span>
+      for
+      free.
+    </p>
+    <p>
+      So, how does it work? Well, if you remember the first example in
+      this chapter, we constructed a Codec and used a Codec using the
+      Codecs class, like this:
+    </p>
+    <pre class="programlisting">Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Rectangle rect = Codecs.decode(codec, in);</pre>
+    <p>
+      Generating documentation just requires using another operation
+      on Codecs:
+    </p>
+    <pre class="programlisting">Codec&lt;Rectangle&gt; codec = Codecs.create(Rectangle.class);
+Codecs.document(codec, DocumentType.Html, new File(...);</pre>
+    <p>
+      When you apply that to<a class="xref" href="#example-shape-inheritance" title="Example&nbsp;7.&nbsp;Shape Inheritance">Example&nbsp;7, &#8220;Shape Inheritance&#8221;</a>, this is what you get:
+    </p>
+    <div class="figure"><a name="d200e158"></a><p class="title"><b>Figure&nbsp;1.&nbsp;Sample report</b></p><div class="figure-contents">
+      
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="319"><tr><td><img src="src/docbkx/report.png" width="319" alt="Sample report"></td></tr></table></div>
+    </div></div><br class="figure-break">
+  </div>
+</div></body></html>

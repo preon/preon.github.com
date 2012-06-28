@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Calibri,Symbol,ZapfDingbats" font-size="10pt" text-align="left" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="1" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Under The Hood</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>Under The Hood</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="Calibri,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="0mm" end-indent="0pt"><fo:block id="d41e1"><fo:block font-family="Calibri,Symbol,ZapfDingbats"><fo:block start-indent="0pt" text-align="center"><fo:block keep-with-next.within-column="always" font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="center" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Under The Hood</fo:block></fo:block><fo:block>What's going on behind the scenes?</fo:block><fo:block space-before="0.5em" font-size="14.4pt"><fo:block>Wilfred Springer</fo:block></fo:block><fo:block space-before="0.5em">$pom.version</fo:block></fo:block></fo:block></fo:block>
+  
+  <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+    The previous chapter introduced a couple of simple introductory
+    cases, showing some of the tricks the framework has up its sleeves
+    if you do not feel the desire to customize anything. While you
+    were reading that chapter, you might have already gone like "hmmm,
+    that's sweet, but unfortunately it doesn't work in my corner
+    case". If that's what you thought, then this is the chapter you
+    need.
+  </fo:block>
+  <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+    In this chapter, I will explain what is actually going on under
+    the hood, in order to understand how to extend the framework
+    yourself. The focus in this chapter is on four major abstractions:
+    the Codec interface itself, the CodecFactory interface, the
+    Binding interface and the CodecDecorator interface. In addition to
+    discussing the actual interface, this chapter will also discuss
+    some of the implementations, in order to help you to understand
+    how everything fits together.
+  </fo:block>
+
+  <fo:block id="d41e11"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Codec</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">1. Codec</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Let's first revisit the Codec interface. In the previous
+      chapter, we already talked about the way you use this
+      interface. In fact, we said that you better use the Codecs
+      convenience class in all cases. If you do that, then there is
+      actually very little to know about the Codec interface
+      itself. It just magically works.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      However, if you want to extend the framework yourself, then this
+      is the
+      <fo:inline font-style="italic">first</fo:inline>
+      interface you really need to
+      understand, since this is probably the interface you need to
+      implement.
+    </fo:block>
+    <fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="fig-codec-interface"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Figure 1. Codec Interface</fo:block>
+      
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d41e18">
+        /**
+ * Copyright (C) 2009-2010 Wilfred Springer
+ *
+ * This file is part of Preon.
+ *
+ * Preon is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation; either version 2, or (at your option) any later version.
+ *
+ * Preon is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * Preon; see the file COPYING. If not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Linking this library statically or dynamically with other modules is making a
+ * combined work based on this library. Thus, the terms and conditions of the
+ * GNU General Public License cover the whole combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this library with independent modules to produce an
+ * executable, regardless of the license terms of these independent modules, and
+ * to copy and distribute the resulting executable under terms of your choice,
+ * provided that you also meet, for each linked independent module, the terms
+ * and conditions of the license of that module. An independent module is a
+ * module which is not derived from or based on this library. If you modify this
+ * library, you may extend this exception to your version of the library, but
+ * you are not obligated to do so. If you do not wish to do so, delete this
+ * exception statement from your version.
+ */
+public interface Codec&lt;T&gt; {
+    T decode(BitBuffer buffer, Resolver resolver, Builder builder)
+            throws DecodingException;
+
+    int getSize(Resolver resolver);
+
+    Expression&lt;Integer, Resolver&gt; getSize();
+
+    CodecDescriptor getCodecDescriptor();
+
+    Class&lt;?&gt;[] getTypes();
+
+    Class&lt;?&gt; getType();
+}
+
+      </fo:block>
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The
+      <fo:inline font-family="Consola">decode(BitBuffer, Resolver,
+        Builder)
+      </fo:inline>
+      is obviously the operation that will
+      decode data from the
+      <fo:inline font-family="Consola">BitBuffer</fo:inline>
+      into an instance of<fo:inline font-family="Consola">T</fo:inline>.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The
+      <fo:inline font-family="Consola">Resolver</fo:inline>
+      allows the
+      <fo:inline font-family="Consola">Codec</fo:inline>
+      to resolve references used
+      in Preon annotations.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The Codec interface is the interface
+      implemented by objects that are able to decode data from a
+      BitBuffer and to encode data into a BitBuffer
+      <fo:footnote><fo:inline><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">1</fo:inline></fo:inline><fo:footnote-body font-family="Calibri,Symbol,ZapfDingbats" font-size="8pt" font-weight="normal" font-style="normal" text-align="left" start-indent="0pt" text-indent="0pt" hyphenate="true" wrap-option="wrap" linefeed-treatment="treat-as-space">
+        <fo:block><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">1</fo:inline>
+          The latter is currently not supported yet, but it's not
+          unlikely that it's going to be implemented in the future.
+        </fo:block>
+      </fo:footnote-body></fo:footnote>
+      . In addition to that, the Codec needs to be able to
+      make some sort of prediction on the number of bits occupied by
+      the encoded data. And last but not least, the Codec needs to be
+      able to return a CodecDescriptor, used for rendering documents
+      with a description of the Codec.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      When I just said that Codecs are capable of decoding data from a
+      BitBuffer, you could have actually read 'decoding an object from
+      a BitBuffer'. Codecs are associated to a single type, and are
+      expected to return only a single instances of that type from the
+      BitBuffer.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In many cases, your objects will hold references to many other
+      objects. Does that mean that a single Codec needs to be able to
+      recursively traverse the object graph and understand how to
+      decode each of the individual members of the objects that it
+      encounters?
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The answer to that question is both yes and no. "Yes", since
+      whenever you invoke decode on the Codec, it needs to be able to
+      reproduce all objects that are referenced by the object that is
+      going to be returned. "No", since the Codec does not have to
+      understand all of that itself. It can simply delegate to other
+      Codecs, one for every type of attribute it encounters.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      If you are decoding an object, you
+      <fo:inline font-style="italic">could</fo:inline>
+      actually use the Codec interface directly. If you create an
+      instance using the
+      <fo:inline font-family="Consola">Codecs</fo:inline>
+      class, they
+      just magically know what to do. We just learned that Codecs
+      constructed like this, will most likely delegate their work to
+      other Codecs, which in turn will most likely delegate their work
+      to other Codecs, and so on and so forth. This way, the Codec
+      both
+      <fo:inline font-style="italic">hides</fo:inline>
+      a chain of responsibility, but
+      is also able to act as a
+      <fo:inline font-style="italic">link</fo:inline>
+      inside a
+      chain of responsibility.
+    </fo:block>
+  </fo:block>
+
+  <fo:block id="d41e37"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">CodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2. CodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The previous section ended with stating that a single Codec most
+      likely delegates to other Codecs, which in turn delegate to
+      other Codecs, etc. Obviously, each Codec has to be constructed
+      before it can be used. All of these instances are created as a
+      result of the create() method on Codecs. But how does the Codecs
+      class know which ones to create?
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      As you might have already have guessed by its name, it is of
+      course the CodecFactory. The CodecFactory a single operation,
+      that is expected to be able to return Codec from the context
+      passed in, or return<fo:inline font-family="Consola">null</fo:inline>.
+    </fo:block>
+    <fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="fig-codecfactory-interface"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Figure 2. CodecFactory Interface</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d41e44">
+        /**
+ * Copyright (C) 2009-2010 Wilfred Springer
+ *
+ * This file is part of Preon.
+ *
+ * Preon is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software
+ * Foundation; either version 2, or (at your option) any later version.
+ *
+ * Preon is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * Preon; see the file COPYING. If not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ * Linking this library statically or dynamically with other modules is making a
+ * combined work based on this library. Thus, the terms and conditions of the
+ * GNU General Public License cover the whole combination.
+ *
+ * As a special exception, the copyright holders of this library give you
+ * permission to link this library with independent modules to produce an
+ * executable, regardless of the license terms of these independent modules, and
+ * to copy and distribute the resulting executable under terms of your choice,
+ * provided that you also meet, for each linked independent module, the terms
+ * and conditions of the license of that module. An independent module is a
+ * module which is not derived from or based on this library. If you modify this
+ * library, you may extend this exception to your version of the library, but
+ * you are not obligated to do so. If you do not wish to do so, delete this
+ * exception statement from your version.
+ */
+public interface CodecFactory {
+    &lt;T&gt; Codec&lt;T&gt; create(AnnotatedElement metadata,
+                        Class&lt;T&gt; type,
+                        ResolverContext context);
+}
+
+      </fo:block>
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Almost every type of Codec you will ever use, will be created by
+      a CodecFactory. If you are searching the Preon codebase for the
+      different type of Codecs supported by it, then chances are you
+      will stumble across CodecFactories only. And if you want to
+      extend the framework with your own Codecs, the thing you
+      actually need to pass to the Codecs class is a CodecFactory, and
+      not a Codec.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The CodecFactory needs to be able to create a Codec from three
+      parameters passed in. The type of object expected, a socalled
+      ResolverContext and metadata. If the Codec is used to decode
+      data to be injected in a field, then the metadata provides
+      access to the annotations defined on that field
+      <fo:footnote><fo:inline><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">2</fo:inline></fo:inline><fo:footnote-body font-family="Calibri,Symbol,ZapfDingbats" font-size="8pt" font-weight="normal" font-style="normal" text-align="left" start-indent="0pt" text-indent="0pt" hyphenate="true" wrap-option="wrap" linefeed-treatment="treat-as-space">
+        <fo:block><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">2</fo:inline>
+          In general, the CodecFactory should not rely on the assumption
+          that the metadata passed in is based on a field. It should
+          just treat it as a number of hints suggesting how to decode
+          data.
+        </fo:block>
+      </fo:footnote-body></fo:footnote>
+      .
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The third parameter (ResolverContext) is a Limbo
+      ReferenceContext. This is the object that supports your
+      CodecFactory in creating references to the context of the field
+      for which it is currently trying to create a reference.
+    </fo:block>
+    <fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="example-things"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Example 1. Expression sample</fo:block>
+      
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d41e52">class Stuff {
+  @Bound int nrOfThings;
+  @BoundList(size="nrThings") Thing[] things;
+}</fo:block>
+    </fo:block></fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Let's take the class above as an example, and assume that your
+      CodecFactory needs to see if it is able to construct a Codec for
+      the "things" field. The annotation contains an expression
+      defining the number of "things" in the array. However, the
+      <fo:inline font-family="Consola">size</fo:inline>
+      annotation attribute is just a String.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In order to be able to turn the expresion "nrOfThings" into
+      something usable, we need to turn that expression into something
+      we can actually evaluate - in this case, a Limbo Expression
+      object. And if there is a problem with this expression, we
+      obviously want to find out early.
+    </fo:block>
+    <fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="fig-expr-relevance"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Figure 3. Expression applied</fo:block>
+      
+      <fo:block id="d41e58"><fo:external-graphic src="url(src/docbkx/things-sample.png)" width="13cm" height="auto" content-width="scale-to-fit" content-height="scale-to-fit"/></fo:block>
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      There are basically two things that could be wrong with the
+      expression: either the expression cannot be interpreted, or the
+      expression contains references to variables not available in the
+      context in which the expression will be evaluated. The
+      ResolverContext supports detecting the latter case.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      This is the way it works: whenever your CodecFactory gets a
+      chance to create a Codec based on metadata, type information and
+      a ResolverContext passed in, it will have to use the
+      ResolverContext to create Expression objects. The Expressions
+      class used to create Expression instances accepts a
+      ReferenceContext as a parameter, and ResolverContext is nothing
+      but a special ReferenceContext. (One specific to Preon.)
+      Normally, you would pass the ResolverContext directly, but there
+      are cases in which you could consider replacing or wrapping the
+      ResolverContext
+      <fo:footnote><fo:inline><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">3</fo:inline></fo:inline><fo:footnote-body font-family="Calibri,Symbol,ZapfDingbats" font-size="8pt" font-weight="normal" font-style="normal" text-align="left" start-indent="0pt" text-indent="0pt" hyphenate="true" wrap-option="wrap" linefeed-treatment="treat-as-space">
+        <fo:block><fo:inline font-family="Calibri,Symbol,ZapfDingbats" font-size="75%" font-weight="normal" font-style="normal" baseline-shift="super">3</fo:inline>
+          There are actually cases in which you might want to replace
+          that ResolverContext with another one. Typically when you want
+          to
+          <fo:inline font-style="italic">introduce</fo:inline>
+          new variables, or if you are
+          basically 'popping' or 'pushing' the stack. (If your current
+          context changes into the context of the attributes type.)
+        </fo:block>
+      </fo:footnote-body></fo:footnote>
+      .
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      So, the first and most important purpose of the ResolverContext
+      is early validation of your expression. The second and also
+      important purpose of the ResolverContext is to facilitate
+      <fo:inline font-style="italic">documentation</fo:inline>
+      getting generated from your
+      Codec.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      <fo:inline font-style="italic">If</fo:inline>
+      your CodecFactory constructs a Codec
+      based on an expression, then the documentation generated by that
+      Codec probably needs to take that into account.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      In case of the example of<fo:basic-link internal-destination="fig-expr-relevance"><fo:inline>Figure 3, “Expression applied”</fo:inline></fo:basic-link>,
+      you would expect a description similar to this: "First you read
+      a 32-bit integer. Then you read a list of items with the size
+      corresponding to the 32-bit integer you just read before."
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Any type of realistic documentation of this file format needs to
+      include this dependency. You want the documentation to clearly
+      state that the size of the list size is dependent on the 32 bits
+      you just read before. That last bit "the 32 bits you just read
+      before" is encapsulated in a Reference. And the ResolverContext
+      allows the Expressions class to obtain these references without
+      having to analyze the entire class again.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      So, the Expression "nrOfElements" will be parsed into a
+      Reference to the nrOfElements attribute defined before. It's the
+      responsibility of the Reference to render itself in a useful
+      way. The Codec or CodecFactory does not even
+      <fo:inline font-style="italic">try</fo:inline>
+      to make sense out of it. It just relies
+      on the ResolverContext to return a proper reference.
+    </fo:block>
+    <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="Consola" id="d41e75">
+Expression expr = Expressions.create("nrOfElements", resolverContext);
+// Potentially results in" 
+// "the number of elements defined before"
+expr.document(....); 
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Now, this may be one of the areas in which the flexibility is
+      getting a litle in the way of understanding what's going on
+      here. However, just to comfort you a little, it's just object
+      orientation. That's all it is. The Reference
+      <fo:inline font-style="italic">itself</fo:inline>
+      decides how it needs to be
+      represented. And the type of ResolverContext passed to the Codec
+      decides how these References are getting constructed. With that,
+      sky is the limit.
+    </fo:block>
+    <fo:block id="d41e78"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">CompoundCodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2.1. CompoundCodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The CompoundCodecFactory must be one of the only implementations
+        of CodecFactory that doesn't actually create any other Codec
+        itself. The main purpose of the CompoundCodecFactory is to hide
+        the complexity of choosing a particular type of CodecFactory
+        behind an interface. The CompoundCodecFactory references a list
+        of other CodecFactories. When asked for construction of a Codec,
+        it will simply ask all of the factories it references and try
+        each of them to construct a Codec. If all fails, it will simply
+        return<fo:inline font-family="Consola">null</fo:inline>, just what you would expect for a
+        CodecFactory.
+      </fo:block>
+    </fo:block>
+
+    <fo:block id="d41e82"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">WholeNumberCodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2.2. WholeNumberCodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        There are many CodecFactories that create Codecs
+        themselves. (There are also a few other CodecFactories that
+        don't create Codecs themselves, apart from the
+        CompoundCodecFactory, but that's a subject that can wait for a
+        while while.) This section starts with one of the most
+        simplest: the WholeNumberCodecFactory.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The WholeNumberCodecFactory creates Codecs capable of decoding -
+        well - whole numbers. I didn't want to say integers, since that
+        might lead you to be believe that its capable of decoding
+        java.lang.Integer and its primitive counterpart only, which is
+        not the case. WholeNumberCodecFactory supports decoding byte,
+        short, int, long and all object representations of those types.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The WholeNumberCodecFactory is the first example in which a
+        a CodecFactory could use the metadata passed with annotations to
+        decode the data in the proper way. By default, it will return a
+        Codec for byte, short, int or long type of fields whenever:
+      </fo:block>
+      <fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d41e87"><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e88"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            <fo:inline font-family="Consola">null</fo:inline>
+            is passed in as metadata;
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e91"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            An @Bound instance is passed in as metadata;
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e93"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            An @BoundNumber instance is passed in as metadata.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The
+        <fo:inline font-family="Consola">null</fo:inline>
+        case is not important for now. The
+        @Bound annotation supports the default case. The CodecFactory
+        will take this annotation as a signal that it actually needs to
+        create a Codec, using the defaults for the type passed in. The
+        @BoundNumber annotation supports the case in which you
+        <fo:inline font-style="italic">do</fo:inline>
+        want a Codec to be created, but you
+        don't like the defaults.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        Here are some examples in which you would want to use the
+        @BoundNumber annotation, instead of the @Bound annatation:
+      </fo:block>
+      <fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d41e99"><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e100"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            You want to decode 4 bits into a byte.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e102"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            You want to force little endian when decoding an 32-bit
+            integer.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e104"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            You want to decode a 32-bit unsigned integer as a long.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The WholeNumberCodecFactory is a good example of the pattern
+        that you will find implemented in almost all other
+        CodecFactories:
+      </fo:block>
+      <fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d41e107"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d41e108"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            Attempt to return a default Codec whenever
+            <fo:inline font-family="Consola">null</fo:inline>
+            or @Bound is passed in.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d41e111"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            ...unless there is some other piece of metadata passed in,
+            telling the CodecFactory how to customize the Codec it
+            creates.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+    </fo:block>
+
+    <fo:block id="d41e113"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">BooleanCodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2.3. BooleanCodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The BooleanCodecFactory is by far the simplest example of a
+        CodecFactory (and associated Codec) that you could ever come
+        up with. If the CodecFactory is challenged with a boolean type
+        (either the primitive type or the object type) and the
+        presence of an @Bound annotation in the metadata passed in,
+        then it will create a new Codec. Whenever this Codec is asked
+        to decode a value from the BitBuffer, it will read a single
+        bit and return true if the bit is 1, and false otherwise.
+      </fo:block>
+    </fo:block>
+
+    <fo:block id="d41e116"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">ObjectCodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2.4. ObjectCodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        In theory, it could have been possible to construct Codecs by
+        hand, by using a constructor. However, that's not actually
+        something you want to do yourself. The Codec created would have
+        to closely resemble the datastructure you need to decode. And
+        since every Codec is capable of decoding one value, and there is
+        a fair chance that the object you are trying to decode exists of
+        many other objects, it would even be quite hard to do this
+        yourself.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The good news is: you don't have to do all of that
+        yourself. The ObjectCodecFactory basically does it all for you.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The ObjectCodecFactory works on basically all existing
+        objects. If all other CodecFactories fail, then the
+        ObjectCodecFactory might still be able to return a Codec, even
+        though the Codec created might basically be a no-op. (It won't
+        decode anything.) That's why normally every CompoundCodecFactory
+        instance is advised to try the ObjectCodecFactory as a last
+        attempt.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The ObjectCodecFactory is probably much simpler than you would
+        expect. Suppose that you want to create a decoder for instances
+        of type A:
+      </fo:block>
+      <fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" keep-together.within-column="auto" id="d41e122"><fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-distance-between-starts="2em" provisional-label-separation="0.2em"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em"><fo:list-item-label end-indent="label-end()"><fo:block id="d41e123">1.
+          </fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            Get the list of all fields declared on type A.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em"><fo:list-item-label end-indent="label-end()"><fo:block id="step-create-codec">2.
+          </fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            For each field declared on type A, create a Codec for the type of
+            value accepted by that field, and wrap both the reference to
+            the field and the Codec for its values in a new Binding
+            instance.
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em"><fo:list-item-label end-indent="label-end()"><fo:block id="d41e127">3.
+          </fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+          <fo:block>
+            Create a new Codec that - on an invocation of decode - will
+            always create an instance of type A, and populate its data
+            by giving every Binding the opportunity to load its data
+            from the BitBuffer passed in. (The Binding will simply use
+            the Codec it references to do the actual decoding of the
+            field's value.)
+          </fo:block>
+        </fo:block></fo:list-item-body></fo:list-item></fo:list-block></fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        You may have wondered how the ObjectCodecFactory creates a Codec
+        corresponding to the field's type, in<fo:basic-link internal-destination="step-create-codec"><fo:inline>Step 2</fo:inline></fo:basic-link>. The answer is simple: it uses a
+        CodecFactory. It may be different CodecFactory than the
+        ObjectCodecFactory itself, but it's highly likely that it
+        references the ObjectCodecFactory itself somewhere under its
+        covers.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        We just said that ObjectCodecFactories use Binding objects
+        under the covers. It's important that you know about these
+        guys, since the ObjectCodecFactory actually allows you to
+        override the way they work, by pluging in your own
+        BindingFactory. We are not going to discuss the typical use
+        case yet, but for now it's important at least to know they
+        exist. (Check out
+        <fo:basic-link internal-destination="section-conditional-binding"><fo:inline>Section 3, “Binding”</fo:inline></fo:basic-link>
+        for a typical example
+        on how to leverage this plugpoint.)
+      </fo:block>
+    </fo:block>
+
+    <fo:block id="d41e133"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">ListCodecFactory</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">2.5. ListCodecFactory</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        With the three CodecFactories listed above, we would already be
+        able to decode nested objects, in which each of the objects
+        fields references either a numberic value or another object. But
+        that's not enough. (In fact, we don't even know when it would be
+        enough; that's why Preon is an extensible framework. We leave
+        it up to you to decide when you consider it to be enough.)
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        One of the most important missing cases is support for
+        lists. Many binary encoding standards have some repeating
+        sequences inside. This is where the ListCodecFactory comes in.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The ListCodecFactory allows you to decode lists of objects. At
+        this stage, it's limited to a list of a certain size, but it is
+        expected that there will be other implementations that have
+        other ways to demarcate the end of the list.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The ListCodecFactory creates a Codec whenever the @BoundList
+        annotation is passed in. It will use the attributes of this
+        annotation to figure out how and what to decode. In the simple
+        case, that could be as little as stating the type and the size
+        of the list.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        If you would create a Codec simply by passing the type and the
+        size of the list, then the ListCodecFactory can be expected to
+        return a Codec implementation that will - on calling decode() -
+        return a List implementation that allows you to visit all
+        elements in the List. Don't expect one of the default
+        implementations of List though. By default, the Codec created by
+        the ListCodecFactory will return its own implements of List, one
+        that decodes object on the fly, on demand.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        It is important to emphasize the difference between the Codec
+        that returns the List instance, and the Codec used to decode
+        elements of the List. These are two completely different
+        Codecs. The Codec decoding the List is seeded with a Codec
+        capable of reading the elements of the List.
+        <fo:inline>???</fo:inline>
+        shows how these elements collorate
+        in a real world scenario.
+      </fo:block>
+      <fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="always" id="fig-list-decoding"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Figure 4. Decoding a List</fo:block>
+        
+        <fo:block id="d41e144"><fo:external-graphic src="url()" width="auto" height="auto" content-width="auto" content-height="auto"/></fo:block>
+      </fo:block>
+    </fo:block>
+  </fo:block>
+  <fo:block id="section-conditional-binding"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Binding</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">3. Binding</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      A couple of sections back, I talked about Bindings, and how the
+      Codec created by an ObjectCodecFactory uses these bindings to
+      load and store values from and in a Field. I also said that you
+      can customize the way these Bindings behave. This section is
+      going to give you an example.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Many binary formats have some conditional built into the
+      specification. Here are some examples:
+    </fo:block>
+    <fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d41e151"><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e152"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+        <fo:block>
+          If the version of the file is bigger than 400, then read
+          this data structure first, otherwise continue with the next
+          data structure.
+        </fo:block>
+      </fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="0em" space-before.minimum="0em" space-before.maximum="0.2em" id="d41e154"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>
+        <fo:block>
+          If the first bit read is 1, then read 7 bits and decode it
+          as a byte; otherwise continue to read 7 + 8 bits and
+          decode as a short.
+        </fo:block>
+      </fo:block></fo:list-item-body></fo:list-item></fo:list-block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      All of these cases could have been solved by breaking out of the
+      ordinary framework and implement the entire encoding/decoding
+      logic yourself. That would not only be really hard, but also
+      result in code that will not be self-documenting in the way
+      Preon normally is.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Preon takes another approach, and allows you to declaritively
+      specify the conditions in which the framework should try to
+      load data in bound fields, using the @If annotation. The @If
+      annotation takes a single argument, which is the condition
+      stated in Limbo.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      The reason Preon is capable of dealing with these expression is
+      because it will create a
+      <fo:inline font-style="italic">Binding</fo:inline>
+      that is
+      capable of loading data from the BitBuffer if the condition
+      holds. Which is why it is sometimes convenient to have the
+      ability to create your own custom Binding implementation instead
+      of the default one.
+    </fo:block>
+  </fo:block>
+
+  <fo:block id="d41e160"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">CodecDecorator</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">4. CodecDecorator</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+    
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      Up til now, we have only seen examples of CodecFactories
+      creating Codecs. Codecs are however not
+      <fo:inline font-style="italic">always</fo:inline>
+      constructed by CodecFactories. If
+      you want the framework to deal with your own Codec, then there
+      is another way to make it create your own Codec, which is by
+      implementing the CodecDecorator interface.
+    </fo:block>
+    <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+      As you may have guessed, the CodecDecorator has something in
+      common with the Decorator Pattern (see GoF). The CodecDecorator
+      allows you to transparenly add additional behaviour to a Codec,
+      by applying some 'decoration'. So, where the CodecFactory
+      accepts the type and metadata indicating the specific Codec you
+      want to construct, the CodecDecorator
+      <fo:inline font-style="italic">also</fo:inline>
+      accepts the Codec that should be wrapped.
+    </fo:block>
+
+    <fo:block id="d41e166"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">LazyLoadingCodecDecorator</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">4.1. LazyLoadingCodecDecorator</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        When you ask the LazyLoadingCodecDecorator to decorate an
+        existing Codec, you get a new Codec that - on receiving a call
+        to decode - will
+        <fo:inline font-style="italic">not</fo:inline>
+        pass the call on to
+        the Codec it decorates; instead, it will return a proxy that
+        acts as the object that needs to be created by the decororated
+        Codec. The
+        <fo:inline font-style="italic">actual</fo:inline>
+        object will only be
+        loaded from the BitBuffer right after you call an operation on
+        that proxy for the first time.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The LazyLoadingCodecDecorator is triggered by the presence of
+        the LazyLoading annotation on the type you want to have loaded
+        lazily.
+      </fo:block>
+    </fo:block>
+
+    <fo:block id="d41e172"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="Calibri,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="Calibri" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">SlicingCodecDecorator</fo:marker><fo:block font-size="12pt" font-weight="bold" text-align="left" padding-top="1cm">4.2. SlicingCodecDecorator</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block>
+      
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The SlicingCodecDecorator decorates existing Codecs by returning
+        a new Codec that - on receiving a decode call - passes the
+        request on to the decorated Codec, but replacing the BitBuffer
+        passed by taking a slice of the original.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        The main reason of having a SlicingCodecDecorator is to
+        support type length value records. The main idea here is that
+        Codecs reading the records data should
+        <fo:inline font-style="italic">not</fo:inline>
+        be required to know the amount of
+        data to be expected. As you might have seen before, the Codec
+        constructed doesn't support passing in the maximum number of
+        bytes to be read, or anything. And having to implement that
+        logic for all TLV record readers seemed to be a waste.
+      </fo:block>
+      <fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+        Instead of having every TLV record Codec implement support for
+        detecting the end of the record, the decision was made to
+        externalize that behaviour and put it into a separate Codec,
+        decorating the Codec that reads the data from the TLV record.
+      </fo:block>
+    </fo:block>
+  </fo:block>
+
+</fo:flow></fo:page-sequence></fo:root>

@@ -1,0 +1,24 @@
+-classpath
+'/Users/wilfred/workspace/preon/preon-el/target/classes:/Users/wilfred/workspace/preon/preon-el/target/test-classes:/Users/wilfred/.m2/repository/org/easymock/easymock/2.3/easymock-2.3.jar:/Users/wilfred/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/Users/wilfred/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/wilfred/.m2/repository/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar:/Users/wilfred/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/wilfred/workspace/preon/preon-el/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2012. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/wilfred/workspace/preon/preon-el/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Preon EL 1.1-SNAPSHOT Test API'
+-linkoffline
+'http://download.oracle.com/javase/1.5.0/docs/api' '/Users/wilfred/workspace/preon/preon-el/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Preon EL 1.1-SNAPSHOT Test API'

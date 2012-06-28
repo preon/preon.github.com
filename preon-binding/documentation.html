@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Preon Binding - </title>
+    <script type="text/javascript" src="http://use.typekit.com/lqp7hgv.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                    <div id="bannerLeft">
+    
+            Preon Binding
+    
+            </div>
+                  </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+    
+  
+    
+            <div class="xleft">
+        Last Published: 2012-06-28
+                  &nbsp;| Version: 1.1-SNAPSHOT
+                      </div>
+            <div class="xright">      
+  
+
+  
+    
+    
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="main">
+      <div id="leftColumn">
+        <div id="navcolumn">
+              
+  
+
+  
+    
+    
+  
+    
+                      <h5>Parent Project</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="../index.html">Preon</a>
+          </li>
+          </ul>
+              <h5>Documentation</h5>
+            <ul>
+              
+    <li class="none">
+                    <a href="http://www.scribd.com/doc/8128172/Preon-Introduction" class="externalLink">Introduction</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://www.scribd.com/doc/7988375/Preon-Under-the-Hood" class="externalLink">Under the Hood</a>
+          </li>
+              
+    <li class="none">
+                    <a href="http://www.slideshare.net/springerw/preon-jfall-2008-presentation-746831?type=powerpoint" class="externalLink">J-Fall Slides</a>
+          </li>
+              
+    <li class="none">
+                    <a href="../getting-started.html">Getting Started</a>
+          </li>
+          </ul>
+              <h5>Sub modules</h5>
+                  <h5>Reports</h5>
+            <ul>
+              
+                
+                    
+                  
+              
+        <li class="collapsed">
+                    <a href="project-info.html">Project Information</a>
+                </li>
+              
+                
+                    
+                  
+              
+        <li class="collapsed">
+                    <a href="project-reports.html">Project Reports</a>
+                </li>
+          </ul>
+                    
+  
+
+  
+    
+    
+  
+    
+          </div>
+      </div>
+      <div id="bodyColumn">
+        <div id="contentBox">
+          <div class="section"><h2>Documentation<a name="Documentation"></a></h2><div class="section"><h3>Introduction<a name="Introduction"></a></h3><p>A Codec basically captures the binary representation of in-memory representation of a chunk of data. Since that is what they capture, it should be fairly straightforward to turn that into documentation of the binary representation. But since the whole conversion between the binary representation and the in-memory representation can be quite involved, you would rather not leave that some external component. In fact, in order to make Preon truly extensible, the responsibility for generating documentation is within the Codec itself.</p><p>So, that means that a Codec needs to implement a contract to support document generation. And since a Codec is most often the first component in a chain of Codecs, it will have to use the interface of the other Codecs to generate documentation about the details it does not control itself. A Codec of a list is dependent on a Codec of its elements. The Codec of a list should be able to generate documentation on the number of elements in the list, and the type of elements in the list. The Codec for the elemement should be able to specify the details for that type of element.</p><p>However, if all Preon would do is call its Codecs to generate their description in a single line, that would generate pretty awful documentation. If you want documentation, then you of course want readable documentation. Documentation that uses proper structuring mechanisms to ease reading. If something takes more than a couple of lines to explain, it probably justifies having it documented in a dedicated section, and then link to that wherever you need it.</p><p>Apart from generating a human readable description, you also want to capture some structural aspects. For instance, it is not uncommon for struct-type of data to have a table with its elements, and a column stating the number of bits that will be occupied by the individual elements. (I didn't make that up. Check Wikipedia for some binary formats, and you will find out for yourself.)</p></div><div class="section"><h3>Interface<a name="Interface"></a></h3><p>Given all of the above, it is clear that the interface generating the documentation (the interface to be implemented by Codecs) should at least have a couple of capabilities:</p><ul><li>The Codec should be able to decide wether it considers itself important enough for a dedicated section. If you have a numeric attribute on an object, then the corresponding Codec is most likely the NumericCodec. All you can really say about the way that number is encoded is something about the number of bits, and the byte order. That's probably it. In that case, you don't want the Codec to claim a dedicated section.</li><li>The Codec should be able to render a human readable description of the number of bits it expects to occupy. There are a couple of options. Either you the number of bits is a fixed size, unknown, or can be derived from data read further upstream. The API should be able to cater for all three of these situations; in fact, in the third case, it should be possible to turn that expression in something human readable, with links to the pieces of data it depends upon. (For sure not a simple requirement, but on the plus side: it is already implemented.)</li><li>The Codec should be able to render a reference to itself, to be used in the documentation generated by Codecs depending on it.</li><li>The Codec should be able to render a full description to some context. </li><li>The Codec should be able to render a descriptive (and ideally unique) label of itself. Why? Well, if you want to offer the Codec the option to render itself in a dedicated section, you want to have a name for that section.</li></ul></div><div class="section"><h3>Context<a name="Context"></a></h3><p>As you might have noticed, the previous section didn't explicitly mention the target document type. Sure, we saw that the Codec needs to be able to generate a reference to itself, but we didn't actually see what that reference needs to be. In fact, the previous section did not mention anything like a output document type at all. </p><p>Now, what I am about to say now might smell like retrofitting a solution to a requirement, but I still think it is a valid requirement, until somebody prooves me wrong. </p><p>The thing is, Preon is extensible. If the Codec would pick HTML as the output document type today, then it would be quite a safe bet, but it would make it hard to ever use something else than HTML. If Preon would pick a fairly widely accepted general documentation format such as DocBook, then it would automatically reduce the number of people capable of writing a Codec to a handfull of people who would be willing to learn DocBook. APT may be fairly widely accepted, but then again, which APT? MediaWiki? Doxia?</p><p>Apart from all of that, it would make the interface a little fragile. If your Codecs would have to write to an OutputStream, how would you know what the content type expected would be? How would you know about the document context. How would you know that you are expected to write contents for an HTML paragraph, instead of a DocBook section? </p></div><div class="section"><h3>The Answer<a name="The_Answer"></a></h3><p>Given the requirements above, it should be fairly easy to understand the design choices made for Preon. Preon opted for having the Codecs being capable of returning a CodecDescriptor that implements most of the features listed in the Interface section. True, in the current incarnation of Preon, the names of the operations are a little awkward, but the intention is still the same.</p><p>There is one thing missing in the CodecDescriptor interface. It does not return the number of bits inhabited by the binary encoded representation of a piece of data. But the good news is: that is already provided by the Codec itself. The Codec itself has a getSize() operation. It returns either null - in case the size is really unknown - or a Limbo expression. And Limbo expressions are capable of rendering themselves to a document. And what is more, a Limbo expression will also render the references in a way that is in sync with Preon's conceptual notion of the data structure to be encoded. So it's the Expression itself that is capable of rendering itself to a document in a human-readable way.</p><p>Then, last but not least, the context. In Preon, the CodecDescriptors receive a different context, depending on the scope of operation. An operation that is only intended to write a reference, gets a paragraph context. It will never be able to write outside of that paragraph. It will be able to use links, italics, and other inline type of document elements, but that's it. However, an operation that is expected to generate content in a dedicated section gets access to the full range of document elements you could have in that section. That operation is able to add tables, figures, multiple paragraphs, etc. But again, it will be impossible to write outside of the context of that section.</p><p>Now, there is one thing missing from all of this. In Preon, many Codecs will be decorated by others. For instance, you are able to specify that a Codec is only allowed to read from a slice of data. So, you cannot read beyond that slice. The Codec itself doesn't know of this condition. That Codec might be configured to just continue to read until it hits an 'end of file'. But if that Codec is decorated by another Codec offering it just a slice of underlying data, the documentation should be able to state something about that slice. </p><p>Let's take encryption, as an alternative example. In Preon, it is perfectly feasible to have a Codec for a certain piece of data (say an address) decorated by a Codec that deals with encrypted data. The encrypting Codec would decrypt data coming in, and pass it on to the address Codec. The documentation of the address Codec is still valid. However, the decorating encryption Codec should leave some traces in the generated documentation as well. You could imagine the documentation would be something like this:</p><div><pre>
+An address. (Find details here.) The binary representation of the
+address is stored encrypted using a Blowfish cipher, based on a shared
+secret. The format reserves 256 bytes for the encrypted address.
+</pre></div><p>In the example above, the documentation starts with the format is documented starting with the inner-most Codec, and it's then adding more content while working its way out. (Note to self: I guess this means we need to be able to render something without 'a' or 'the.) (Second note to self: it also means that we need to be able to be able to generate a different type of reference?)</p></div></div><div class="section"><h2>______<a name="a______"></a></h2></div><div class="section"><h2>A sequence of bytes. The number of bytes is unknown up front, and while decoding only determined by the number of bytes remaining. The binary representation of the sequence of bytes is stored encrypted using a Blowfish cipher, based on a shared secret. The format reserves 256 bytes for the encrypted sequence of bytes.<a name="A_sequence_of_bytes._The_number_of_bytes_is_unknown_up_front_and_while_decoding_only_determined_by_the_number_of_bytes_remaining._The_binary_representation_of_the_sequence_of_bytes_is_stored_encrypted_using_a_Blowfish_cipher_based_on_a_shared_secret._The_format_reserves_256_bytes_for_the_encrypted_sequence_of_bytes."></a></h2><div><pre>
+
+
+    </pre></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2012
+    
+          
+  
+
+  
+    
+    
+  
+    
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

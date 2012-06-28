@@ -1,0 +1,9 @@
+org.codehaus.preon.annotation
+org.codehaus.preon.binding
+org.codehaus.preon
+org.codehaus.preon.codec
+org.codehaus.preon.descriptor
+org.codehaus.preon.el
+org.codehaus.preon.reflect
+org.codehaus.preon.rendering
+org.codehaus.preon.util

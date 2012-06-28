@@ -1,0 +1,28 @@
+-classpath
+'/Users/wilfred/workspace/preon/preon-samples/preon-sample-bytecode/target/classes:/Users/wilfred/workspace/preon/preon-samples/preon-sample-bytecode/target/test-classes:/Users/wilfred/.m2/repository/log4j/log4j/1.2.12/log4j-1.2.12.jar:/Users/wilfred/.m2/repository/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar:/Users/wilfred/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/wilfred/workspace/preon/preon-binding/target/classes:/Users/wilfred/.m2/repository/cglib/cglib/2.1_3/cglib-2.1_3.jar:/Users/wilfred/.m2/repository/org/antlr/antlr-runtime/3.3/antlr-runtime-3.3.jar:/Users/wilfred/.m2/repository/backport-util-concurrent/backport-util-concurrent/3.0/backport-util-concurrent-3.0.jar:/Users/wilfred/.m2/repository/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar:/Users/wilfred/.m2/repository/nl/flotsam/pecia/pecia/1.0/pecia-1.0.jar:/Users/wilfred/workspace/preon/preon-io/target/classes:/Users/wilfred/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar:/Users/wilfred/.m2/repository/avalon-framework/avalon-framework/4.1.3/avalon-framework-4.1.3.jar:/Users/wilfred/.m2/repository/org/hamcrest/hamcrest-all/1.1/hamcrest-all-1.1.jar:/Users/wilfred/workspace/preon/preon-el/target/classes:/Users/wilfred/.m2/repository/commons-io/commons-io/1.2/commons-io-1.2.jar:/Users/wilfred/.m2/repository/commons-logging/commons-logging/1.1/commons-logging-1.1.jar:/Users/wilfred/workspace/preon/preon-emitter/target/classes:/Users/wilfred/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/wilfred/.m2/repository/asm/asm/1.5.3/asm-1.5.3.jar:/Users/wilfred/.m2/repository/org/codehaus/woodstox/wstx-asl/3.2.1/wstx-asl-3.2.1.jar:/Users/wilfred/.m2/repository/logkit/logkit/1.0.1/logkit-1.0.1.jar:/Users/wilfred/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/wilfred/workspace/preon/preon-samples/preon-sample-bytecode/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2012. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/wilfred/workspace/preon/preon-samples/preon-sample-bytecode/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Preon Example Bytecode 1.1-SNAPSHOT Test API'
+-linkoffline
+'http://download.oracle.com/javase/1.5.0/docs/api' '/Users/wilfred/workspace/preon/preon-samples/preon-sample-bytecode/target/javadoc-bundle-options'
+-linkoffline
+'http://preon.codehaus.org/preon-binding/apidocs' '/Users/wilfred/workspace/preon/preon-binding/target/site/testapidocs'
+-linkoffline
+'http://preon.codehaus.org/preon-emitter/apidocs' '/Users/wilfred/workspace/preon/preon-emitter/target/site/testapidocs'
+-use
+-version
+-windowtitle
+'Preon Example Bytecode 1.1-SNAPSHOT Test API'
